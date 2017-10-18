@@ -1,0 +1,7 @@
+.vagrant/*
+/.vagrant/
+wanchain-token/*
+rcn-token/*
+KyberNetwork/*
+cintix/*
+Essentials/build/*
