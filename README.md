@@ -90,7 +90,59 @@ Saving successful migration to network...
 Saving artifacts...
 ```
 
+### Let's Advance
+Now we have deployed our contract its time to play with it. We can use ```truffle console``` to send messages to the contract and read its public state.
 
+```
+truffle(development)> HelloWorld.deployed()
+```
+Using .deployed() in-built function we're able to see the state and contracts properties
+
+```
+// get the deployed version of our contract
+truffle(development)> var helloworld = HelloWorld.at(HelloWorld.address)
+//or better yet;
+truffle(development)> HelloWorld.deployed().then(function(instance){helloworld=instance})
+
+// and print its address
+truffle(development)> helloworld.address
+'0xcf25e0ad79727b0f0312bb6b3a457480fbe1707d'
+```
+
+After making any changes to the contract(s) run ```truffle compile``` and then ```truffle migrate --reset```
+
+```
+truffle(development)> var accounts = web3.eth.accounts
+truffle(development)> accounts
+[ '0x3241d4f35c968064ae5847ea89accaf7b97f50c1',
+  '0xc2d5b186db20d93b46b3435d0a6d08824ad9e624',
+  '0x843a8c5a563774e78722b6133412a06e8a1e3d35',
+  '0xe5b54b16f2be4ab37977a1c15ec94b6d890100ac',
+  '0x7ef4049fe4487940bd0bf65f8882442e74e516a7',
+  '0x0ec341f555a59ccdf13fd559c693b82edda7bd2a',
+  '0x71f3acbdac7cd98ed6e3bfcf32c2aeb17b0cec41',
+  '0xfaa415ef7719bceed415b7600f95ca60efe2785d',
+  '0x4ea237c7803e0f92c03a7674afcd837055c54455',
+  '0xc1b51a3a2fa5cc5fe4dce62268d7e65e9c4e9616' ]
+```
+
+Now lets make a deposit on our HelloWorld smart contract
+```
+truffle(development)> helloworld.deposit(400)
+{ tx: '0x80d0e5a01f494b0b02b4b1ba87e0725f7508f36597343e82adf1361c6265f22c',                 
+  receipt:                                                                                  
+   { transactionHash: '0x80d0e5a01f494b0b02b4b1ba87e0725f7508f36597343e82adf1361c6265f22c', 
+     transactionIndex: 0,                                                                   
+     blockHash: '0xcbd420c16488b57aed953691c4cb07281ba793c3daffe3d0a6b1c67eb28c7fd1',       
+     blockNumber: 14,                                                                       
+     gasUsed: 26932,                                                                        
+     cumulativeGasUsed: 26932,                                                              
+     contractAddress: null,                                                                 
+     logs: [] },                                                                            
+  logs: [] } 
+  ```
+
+  This returns the ```tx``` which is the Transaction ID                                                                               
 
 ## License and Authors
 
