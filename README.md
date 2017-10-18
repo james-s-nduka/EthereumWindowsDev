@@ -1,15 +1,15 @@
-# Etheream Smart Contract Development Environment for Windows
+# Ethereum Smart Contract Development Environment for Windows
 
-A comprehensive guide for setting up your Windows workstation to begin developing, building and testing Smart Contracts.
+A comprehensive guide for setting up your Windows 64bit workstation to begin developing, building and testing Smart Contracts.
 
 ## Requirements
 In order to begin development you will need the following;
 
 * Visual Studio Code: https://code.visualstudio.com/ 
-* The Solidity extension installed for Visual STudio Code
+* The Solidity extension installed for Visual Studio Code
 * OpenSSL Win64 libraries which can be downloaded here; https://slproweb.com/products/Win32OpenSSL.html
 
-## Helpful Links
+### Helpful Links
 * The online Solidity compiler: https://ethereum.github.io/browser-solidity
 
 ## Setup Instructions
@@ -18,15 +18,15 @@ In order to begin development you will need the following;
 ```
 powershell .\Install-Truffle.ps1 
 ```
-This will download & install the latest version of **Node.JS** and the required npm modules for Ethereum development; **TestRPC** & **Truffle**
+This will download & install the latest version of **Node.JS** and the required npm modules for Ethereum development; **TestRPC** & **Truffle**.
 
 3. Upon successful execution of the powershell script,ensure the path ```C:\npm``` is an entry in the User's environment variables;
 
 ![Screenshot](img001.png)
 
-4. Restart your terminal prompt (GitShell/GitBash/Powershell etc)
+4. Restart your terminal console (GitShell/GitBash/Powershell etc)
 
-5. To confirm the components were installed and configured correctly insert ```truffle version``` in the terminal prompt and hit enter. This should return output similiar to this;
+5. To confirm the components were installed and configured correctly type ```truffle version``` in the terminal prompt and hit enter. This should return output similiar to this;
 ```
 Truffle v3.4.11 (core: 3.4.11)
 Solidity v0.4.15 (solc-js)
@@ -37,7 +37,7 @@ Solidity v0.4.15 (solc-js)
 Truffle with TestRPC provides us with an **Ethereum network simulator** which is fast, free and private. Ideally, you will want to confirm your contract is bug free and meets it's requirements before deploying it to the ```testnet``` which is still free however public and up for scrutiny. Once satisfied and ready to execute the contract in the **live(the real)** Ethereum network, we will deploy to the ```mainnet```.
 
 ### Let's Start
-In the ```Essentials``` directory you should see a folder struture like this;
+In the ```Essentials``` directory you should see a folder structure like this;
 
 ```
 .
@@ -60,7 +60,7 @@ Run ```testrpc``` in a new terminal and leave it running while you develop. Each
 
 ![Screenshot](img002.png)
 
-Let that terminal window stay open while navigating to the root of YOUR contracts folder in a new console.
+Let that terminal window stay open while navigating to the root of YOUR contracts folder in a **new** console.
 
 You should be able to compile the example contracts by running ```truffle compile```. 
 
@@ -69,7 +69,7 @@ Then, to deploy the contracts to the simulated network. We need to first modify 
 Once that is done, you need to run ```truffle migrate```:
 
 ```
-> **truffle migrate**
+> truffle migrate
 Using network 'development'.
 
 Running migration: 1_initial_migration.js
