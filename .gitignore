@@ -1,6 +1,8 @@
 .vagrant/*
 /.vagrant/
+wanchain-token
 wanchain-token/
+rcn-token
 rcn-token/
 KyberNetwork/*
 cintix/*

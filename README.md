@@ -8,6 +8,7 @@ In order to begin development you will need the following;
 * Visual Studio Code: https://code.visualstudio.com/ 
 * The Solidity extension installed for Visual Studio Code
 * OpenSSL Win64 libraries which can be downloaded here; https://slproweb.com/products/Win32OpenSSL.html
+* Git Shell or Git Bash https://git-for-windows.github.io/ 
 
 ### Helpful Links
 * The online Solidity compiler: https://ethereum.github.io/browser-solidity
