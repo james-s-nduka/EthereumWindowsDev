@@ -12,6 +12,7 @@ In order to begin development you will need the following;
 
 ### Helpful Links
 * The online Solidity compiler: https://ethereum.github.io/browser-solidity
+* Truffle Documentation: http://truffleframework.com/docs/ 
 
 ## Setup Instructions
 1. Clone this repository to your machine
