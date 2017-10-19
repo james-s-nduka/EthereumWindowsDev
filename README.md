@@ -14,6 +14,8 @@ In order to begin development you will need the following;
 * The online Solidity compiler: https://ethereum.github.io/browser-solidity
 * Truffle Documentation: http://truffleframework.com/docs/ 
 * Ethereum Nodes Explorer: https://ethernodes.org/network/1
+* geth Download: https://github.com/ethereum/go-ethereum/wiki/Installation-instructions-for-Windows
+
 
 ## Setup Instructions
 1. Clone this repository to your machine
@@ -67,9 +69,9 @@ Let that terminal window stay open while navigating to the root of YOUR contract
 
 You should be able to compile the example contracts by running ```truffle compile```. 
 
-Then, to deploy the contracts to the simulated network. We need to first modify the ```\migrations\2_deploy_contracts.js``` file to instruct truffle the contract(s) to deploy to our local development network (see the example in the Essentials folder).
+Now, to deploy the contracts to the simulated network. We need to first modify the ```\migrations\2_deploy_contracts.js``` file to instruct truffle the contract(s) to deploy to our local development network (see the example in the Essentials folder).
 
-Once that is done, you need to run ```truffle migrate```:
+Once that is done you need to run ```truffle migrate```:
 
 ```
 > truffle migrate
