@@ -25,13 +25,13 @@ powershell .\Install-Truffle.ps1
 ```
 This will download & install the latest version of **Node.JS** and the required npm modules for Ethereum development; **TestRPC** & **Truffle**.
 
-3. Upon successful execution of the powershell script,ensure the path ```C:\npm``` is an entry in the User's environment variables;
+3. Upon successful execution of the powershell script, ensure the path ```C:\npm``` is an entry in the User's environment variables;
 
 ![Screenshot](img001.png)
 
 4. Restart your terminal console (GitShell/GitBash/Powershell etc)
 
-5. To confirm the components were installed and configured correctly type ```truffle version``` in the terminal prompt and hit enter. This should return output similiar to this;
+5. To confirm the components were installed and configured correctly type ```truffle version``` in the terminal console and hit enter. This should return output similiar to this;
 ```
 Truffle v3.4.11 (core: 3.4.11)
 Solidity v0.4.15 (solc-js)
@@ -65,9 +65,9 @@ Run ```testrpc``` in a new terminal and leave it running while you develop. Each
 
 ![Screenshot](img002.png)
 
-Let that terminal window stay open while navigating to the root of YOUR contracts folder in a **new** console.
+Let the terminal window stay open while navigating to the root of YOUR contracts folder in a **new** console.
 
-You should be able to compile the example contracts by running ```truffle compile```. 
+You should be able to compile the contracts by running ```truffle compile```. 
 
 Now, to deploy the contracts to the simulated network. We need to first modify the ```\migrations\2_deploy_contracts.js``` file to instruct truffle the contract(s) to deploy to our local development network (see the example in the Essentials folder).
 
@@ -99,7 +99,7 @@ Now we have deployed our contract its time to play with it. We can use ```truffl
 ```
 truffle(development)> HelloWorld.deployed()
 ```
-Using .deployed() in-built function we're able to see the state and contracts properties
+Using the .deployed() in-built function we're able to see the state and contracts properties
 
 ```
 // get the deployed version of our contract
@@ -150,7 +150,7 @@ This returns the ```tx``` which is the Transaction ID
 ```
 truffle(development)> web3.eth.getBalance(accounts[0])
 ```
-Each function transaction (modifying state) costs us Gas which is taken in ether      
+Each function transaction (modifying state) costs us Gas which is taken in ether.      
 
 ```
 truffle(development)> helloworld.balance.call()
