@@ -13,6 +13,7 @@ In order to begin development you will need the following;
 ### Helpful Links
 * The online Solidity compiler: https://ethereum.github.io/browser-solidity
 * Truffle Documentation: http://truffleframework.com/docs/ 
+* Ethereum Nodes Explorer: https://ethernodes.org/network/1
 
 ## Setup Instructions
 1. Clone this repository to your machine
@@ -140,9 +141,19 @@ truffle(development)> helloworld.deposit(400)
      contractAddress: null,                                                                 
      logs: [] },                                                                            
   logs: [] } 
-  ```
+```
 
-  This returns the ```tx``` which is the Transaction ID                                                                               
+This returns the ```tx``` which is the Transaction ID    
+
+```
+truffle(development)> web3.eth.getBalance(accounts[0])
+```
+Each function transaction (modifying state) costs us Gas which is taken in ether      
+
+```
+truffle(development)> helloworld.balance.call()
+{ [String: '4500'] s: 1, e: 3, c: [ 1400 ] }
+```
 
 ## License and Authors
 

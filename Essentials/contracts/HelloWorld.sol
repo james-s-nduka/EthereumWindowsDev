@@ -3,7 +3,7 @@ pragma solidity ^0.4.15;
 contract HelloWorld {
     uint public balance;
     
-    // The constructor
+    // The constructor that initializes the balance upon the contract call
     function HelloWorld() {
         balance = 1000;
     }
